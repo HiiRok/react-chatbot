@@ -1,0 +1,40 @@
+.time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 50%; /* Make the container smaller */
+    margin: auto; /* Center the container */
+    
+  }
+  
+  .time-container > div {
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .time-container > div > h2 {
+    margin-bottom: 10px;
+    color: #333; 
+    font-size: 0.75em;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+  }
+  
+  .time-button {
+
+    padding: 5px; 
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    width: 50%; 
+    font-size: .75em; 
+  }
+  
+  .time-button:hover {
+     background-color: #1584f2; 
+  }
+  
