@@ -35,6 +35,10 @@
   }
   
   .time-button:hover {
-     background-color: #1584f2; 
+     background-color:#069af6; 
+  }
+  
+  .time-button.selected {
+    background-color: #069af6;
   }
   

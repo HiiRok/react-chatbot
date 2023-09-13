@@ -5,7 +5,6 @@ import { createClientMessage } from 'react-chatbot-kit';
 import Options from "../components/Options/Options";
 import Calendar from "../components/Options/Calendar"; 
 import TimeSlots from "../components/Options/TimeSlots";
-import Avatar from './Avatar';
 
 import AgeSelection from "../components/Options/AgeSelection";
 

@@ -15,13 +15,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) =>{
   const dispatch = useDispatch();
   const enrollment = useSelector((state) => state.enrollment);
 
-  const greet = () => {
-    const message = createChatBotMessage("Hello, Welcome to student info system!");
-    setState((prev) => ({
-      ...prev,
-      messages: [...prev.messages, message],
-    }));
-  };
+ 
 
   const handleGotIt = () => {
     const message = createClientMessage("Got it!");
@@ -112,7 +106,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) =>{
       {React.Children.map(children, (child) => {
         return React.cloneElement(child, {
           actions: {
-            greet,
             handleGotIt,
             showCalendarOptions,
             selectDateHandler,

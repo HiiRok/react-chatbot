@@ -3,6 +3,7 @@ import "./calender.css"
 
 const Calendar = (props) => {
   const [startDate, setStartDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(null);
 
   const dates = Array.from({ length: 4 }, (_, i) => {
     const date = new Date(startDate);
@@ -11,6 +12,7 @@ const Calendar = (props) => {
   });
 
   const handleDateClick = (date) => {
+    setSelectedDate(date);
     const formattedDate = date.toLocaleDateString('en-US', { day: '2-digit', month: 'short' });
     props.actionProvider.selectDateHandler(formattedDate); 
   };
@@ -34,7 +36,7 @@ const Calendar = (props) => {
         <button
           key={index}
           onClick={() => handleDateClick(date)}
-          className="option-button"
+          className={`option-button ${selectedDate && selectedDate.getTime() === date.getTime() ? 'selected' : ''}`}
         >
           {date.toLocaleDateString('en-US', { day: '2-digit', month: 'short' })}
         </button>

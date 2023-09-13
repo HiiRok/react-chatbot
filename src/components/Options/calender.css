@@ -18,3 +18,7 @@
 .option-button:hover {
   background-color: #069af6;
 }
+
+.option-button.selected {
+  background-color: #069af6;
+}

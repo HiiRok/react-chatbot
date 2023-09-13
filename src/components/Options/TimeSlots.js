@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./time.css";
 
 const TimeSlots = (props) => {
+  const [selectedTime, setSelectedTime] = useState(null);
   const timeSlots = {
     morning: ["9:00AM", "10:00AM", "11:00AM"],
     afternoon: ["12:00PM", "2:00PM", "3:00PM", "4:00PM"],
@@ -9,6 +10,7 @@ const TimeSlots = (props) => {
   };
 
   const handleTimeSlotClick = (time) => {
+    setSelectedTime(time);
     props.actionProvider.selectTimeSlotHandler(time);
   };
 
@@ -21,7 +23,7 @@ const TimeSlots = (props) => {
             <button
               key={time}
               onClick={() => handleTimeSlotClick(time)}
-              className="time-button"
+              className={`time-button ${selectedTime === time ? 'selected' : ''}`}
             >
               {time}
             </button>
